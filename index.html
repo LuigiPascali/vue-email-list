@@ -42,24 +42,30 @@
 
     <body>
        
-        <!-- ! Header Start -->
-        <header>
-           
-        </header>
 
         <!-- ! Main Start -->
         <main>
 
             <div id="app">
+
+                <div class="container mt-5">
+
+                    <h1 class="text-center text-uppercase">
+                        Email Generator
+                    </h1>
+
+                    <ul class="list-group mt-3">
+                        <li v-for="email in emails" :key="email" class="list-group-item mb-2 border-2">
+                            {{ email }}
+                        </li>
+                    </ul>
+                    
+                </div>
                 
             </div>
                                     
         </main>
 
-        <!-- ! Footer Start -->
-        <footer>
-
-        </footer>
 
         <!-- ! Java Script -->
         <script type="text/javascript" src="./js/script.js"></script>
