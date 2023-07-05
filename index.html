@@ -46,7 +46,9 @@
         <!-- ! Main Start -->
         <main>
 
-            <div id="app">
+            <!-- ! MILESTONE VERSION: -->
+
+            <!-- <div id="app">
 
                 <div class="container mt-5">
 
@@ -62,8 +64,36 @@
                     
                 </div>
                 
+            </div> -->
+                               
+            <!-- BONUS VERSION: -->
+
+            <div id="app">
+
+                <div class="container text-center mt-5">
+
+                    <h1>Email Generator</h1>
+
+                    <p v-if="generatingEmails" class="text-center">Generazione in corso...</p>
+                    
+                    <button v-if="!generatingEmails" @click="generateEmails" class="btn btn-primary mx-3">
+                        Genera Email
+                    </button>
+
+                </div>
+
+                <div class="container">
+
+                    <ul v-if="allEmailsGenerated" class="list-group mt-3">
+
+                        <li v-for="email in emails" :key="email" class="list-group-item mb-3 border-2">{{ email }}</li>
+  
+                    </ul>
+
+                </div>
+
             </div>
-                                    
+
         </main>
 
 
